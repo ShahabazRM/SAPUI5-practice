@@ -1,0 +1,39 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m">
+<SearchField search="searchEmployee"/>
+<Table id="employeeTable" items="{employee>/data}" growing="true">
+              <headerToolbar>
+                <Toolbar>
+                    <Title text="Employees"/>
+                    <ToolbarSpacer/>
+                    <Button icon="sap-icon://add" text="{i18n>create}" press="createEmployee"/>
+                    <Button icon="sap-icon://settings" press="openSettings"/>
+                </Toolbar>
+              </headerToolbar>
+              <columns>
+               <Column>
+                  <Label text="ID"/>
+                </Column>
+                <Column>
+                  <Label text="Name"/>
+                </Column>
+                <Column>
+                  <Label text="Age"/>
+                </Column>
+                <Column>
+                  <Label text="type"/>
+                </Column>
+                <Column>
+                  <Label text="Score"/>
+                </Column>
+              </columns>
+              <items>
+                <ColumnListItem type="Navigation" press="navigate">
+                  <Text text="{employee>id}"/>
+                  <Text text="{parts:[{path:'employee>firstName'},{path:'employee>lastName'}],formatter:'.formatName'}"/>
+                  <Text text="{employee>age}"/>
+                  <Text text="{employee>type}"/>
+                  <ObjectStatus text="{employee>score}" state="{path:'employee>score',formatter:'.formatScoreState'}"></ObjectStatus>
+                   </ColumnListItem>
+              </items>
+            </Table>
+</core:FragmentDefinition>

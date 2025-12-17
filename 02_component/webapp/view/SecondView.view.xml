@@ -1,0 +1,13 @@
+<mvc:View
+	controllerName="ui5.demo.apps.controller.SecondView"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+>
+    <Panel>
+        <Button class="sapUiMediumMarginBegin" text="{i18n>btnText}" press="onShowMessageButtonPress"/>
+        <Input ></Input>
+        <Button text="{i18n>btnTextDialog}" press="onOpenDialogButtonPress"></Button>
+    </Panel>
+   
+ 
+</mvc:View>
