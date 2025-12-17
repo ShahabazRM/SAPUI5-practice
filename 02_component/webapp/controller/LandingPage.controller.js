@@ -81,6 +81,7 @@ sap.ui.define([
           oSorter = new Sorter(groupItem.getKey(),groupDesc,true);
         }
         oBinding.sort(oSorter);
+        
     }
   });
 });
