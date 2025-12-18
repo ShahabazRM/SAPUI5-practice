@@ -2,7 +2,7 @@ sap.ui.define([
   'sap/ui/core/mvc/Controller'
 ], function (Controller) {
   'use strict';
-  return Controller.extend("in.sijas.ui5.app.controller.BaseController", {
+  return Controller.extend("ui5.demo.apps.controller.BaseController", {
     getModel: function (sModelName) {
       return this.getOwnerComponent().getModel(sModelName);
     },
