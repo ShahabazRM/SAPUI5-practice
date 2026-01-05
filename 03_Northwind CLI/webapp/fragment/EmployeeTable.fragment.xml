@@ -1,0 +1,40 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m">
+<SearchField search="searchEmployee"/>
+<Table id="employeeTable" items="{/Employees}" growing="true">
+              <headerToolbar>
+                <Toolbar>
+                    <Title text="Employees"/>
+                    <ToolbarSpacer/>
+                    <Button icon="sap-icon://settings" press="openSettings"/>
+                </Toolbar>
+              </headerToolbar>
+              <columns>
+               <Column>
+                  <Label text="Employee ID"/>
+                </Column>
+                <Column>
+                  <Label text="Name"/>
+                </Column>
+                <Column>
+                  <Label text="Title"/>
+                </Column>
+                <Column>
+                  <Label text="City"/>
+                </Column>
+                <Column>
+                  <Label text="Hire Date"/>
+                </Column>
+              </columns>
+              <items>
+                <ColumnListItem type="Navigation" press="navigate">
+                  <Text text="{EmployeeID}"/>
+                  <Text text="{parts:[{path:'FirstName'},{path:'LastName'}],formatter:'.formatName'}"/>
+                  <Text text="{Title}"/>
+                  <Text text="{City}"/>
+                  <Text text="{path:'HireDate',type:'sap.ui.model.type.Date',formatOptions:{pattern:'dd/mm/yyyy'}}">
+                   </Text> 
+                  <!-- <ObjectStatus text="{employee>score}" state="{path:'employee>score',formatter:'.formatScoreState'}"></ObjectStatus> -->
+                   </ColumnListItem>
+              </items>
+            </Table>
+</core:FragmentDefinition>

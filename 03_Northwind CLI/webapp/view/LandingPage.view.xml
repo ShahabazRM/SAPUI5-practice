@@ -1,0 +1,10 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:core="sap.ui.core" controllerName="ui5.demo.apps.controller.LandingPage">
+<Shell backgroundImage="./resources/bg.jpg" logo="./resources/logo.png">
+<App>
+  <Page title="{i18n>pageTitle}">
+   <!-- <mvc:XMLView viewName="ui5.demo.apps.view.SecondView"></mvc:XMLView> -->
+   <core:Fragment type="XML" fragmentName="ui5.demo.apps.fragment.EmployeeTable"></core:Fragment>
+  </Page>
+</App>
+</Shell>
+</mvc:View>
